@@ -1,5 +1,5 @@
-import car11 from "../assets/background/Car11.png";
-import car12 from "../assets/background/Car12.png";
+import car11 from "../assets/background/car11.png";
+import car12 from "../assets/background/car12.png";
 import car1 from "../assets/cars/Car (1).png";
 import car2 from "../assets/cars/Car (2).png";
 import car3 from "../assets/cars/Car (3).png";
