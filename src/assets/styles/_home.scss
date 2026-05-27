@@ -1,0 +1,93 @@
+
+
+.home-page-wrapper {
+  background-color: $bg-light;
+}
+
+.section-label {
+  h5 {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .view-all-link {
+    color: $primary-blue-500;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: darken($primary-blue-500, 15%);
+    }
+  }
+}
+
+
+.popular-cars-scroll-container {
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @media (min-width: 768px) {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.popular-car-item {
+  width: 304px; 
+
+  @media (min-width: 1200px) {
+    flex: 1 1 calc(25% - 1.5rem);
+    min-width: 280px;
+  }
+}
+
+
+.custom-scrollbar {
+  scrollbar-width: none; 
+  
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+}
+
+
+.show-more-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .btn-show-more {
+    background-color: $primary-blue-500;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover, &:focus {
+      background-color: darken($primary-blue-500, 10%);
+    }
+
+    &:active {
+      background-color: $primary-blue-900;
+    }
+  }
+
+  .car-count-badge {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #90A3BF; 
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

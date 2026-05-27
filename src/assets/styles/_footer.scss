@@ -1,0 +1,141 @@
+.footer-wrapper {
+  background-color: #ffffff;
+  border-top: 1px solid #E5E7EB;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100%;
+
+  .footer-brand-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .brand-content-box {
+    width: 100%;
+  }
+
+  .footer-logo-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    outline: none !important;
+
+    img {
+      width: 148px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .footer-tagline {
+    font-size: 16px;
+    line-height: 2;
+    color: rgba(19, 19, 19, 0.6);
+    max-width: 292px;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .footer-links-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1A202C;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(19, 19, 19, 0.6);
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: $primary-blue-500;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(19, 19, 19, 0.08);
+    width: 100%;
+
+    .copyright {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A202C;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-legal-links {
+      gap: 32px;
+    }
+
+    .footer-policy-link {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A202C;
+      cursor: pointer;
+      transition: color 0.15s ease-in-out;
+
+      &:hover {
+        color: $primary-blue-500;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-wrapper {
+    .footer-tagline {
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 100%;
+    }
+
+    .footer-links-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links-list {
+      li {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .footer-bottom {
+      padding-top: 24px !important;
+      
+      .footer-legal-links {
+        width: 100%;
+        gap: 0;
+      }
+
+      .footer-policy-link {
+        font-size: 14px;
+      }
+
+      .copyright {
+        font-size: 14px;
+        width: 100%;
+        margin-top: 8px;
+      }
+    }
+  }
+}

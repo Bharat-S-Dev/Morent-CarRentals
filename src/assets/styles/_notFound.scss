@@ -1,0 +1,34 @@
+
+.notfound-container {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F7F9;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow: hidden;
+
+  .scene {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .car-float {
+    animation: floatCar 3s ease-in-out infinite;
+  }
+}
+
+@keyframes floatCar {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}

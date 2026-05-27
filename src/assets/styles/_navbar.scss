@@ -1,0 +1,197 @@
+.navbar-wrapper {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 24px 0;
+
+  .logo-img {
+    width: 148px;
+  }
+
+  .search-form {
+    width: 100%;
+    max-width: 492px;
+  }
+
+  .search-bar {
+    border: 1px solid #e5e7eb;
+    border-radius: 70px;
+    padding: 6px 12px;
+    background: #ffffff;
+    height: 56px;
+
+    .input-group-text {
+      border: none;
+      background: transparent;
+      padding: 0 10px;
+    }
+
+    .form-control {
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      font-size: 14px;
+      color: #3d5278;
+
+      &::placeholder {
+        color: #90a3bf;
+      }
+    }
+  }
+
+  .nav-icon {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+
+  .profile-img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+  }
+
+  .filter-btn-mobile {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .navbar-toggler {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-wrapper {
+    padding: 20px 0;
+
+    .mobile-topbar {
+      margin-bottom: 24px;
+    }
+
+    .mobile-logo {
+      margin-bottom: 24px;
+    }
+
+    .mobile-search-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .search-form {
+      max-width: 100%;
+      flex: 1;
+    }
+
+    .search-bar {
+      border-radius: 12px;
+      height: 56px;
+    }
+  }
+}
+
+.notification-dropdown {
+  width: 320px !important;
+  border-radius: 12px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-top: 1rem !important;
+}
+
+.notification-scroll-body {
+  max-height: 240px; 
+}
+
+.fs-6-custom {
+  font-size: 13px !important;
+}
+
+.fs-7-custom {
+  font-size: 11px !important;
+}
+
+.unread-notification-item {
+  background-color: rgba(53, 99, 233, 0.03) !important;
+  border-left: 3px solid #3563E9 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.wishlist-drawer {
+  width: 400px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.badge-blue {
+  background-color: #3563E9 !important;
+  font-size: 12px !important;
+}
+
+.wishlist-item-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.wishlist-img-container {
+  width: 70px;
+  height: 55px;
+}
+
+.text-blue {
+  color: #3563E9 !important;
+  font-size: 13px;
+}
+
+.mini-card-title {
+  max-width: 140px;
+  font-size: 14px;
+}
+
+.small-text {
+  font-size: 12px !important;
+}
+
+.rent-btn-sm {
+  background-color: #3563E9 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #244dd8 !important;
+  }
+}
+
+.remove-btn {
+  color: #90A3BF !important;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #ED3F3F !important;
+  }
+}

@@ -1,0 +1,203 @@
+
+.category-container {
+  display: flex;
+  background-color: $bg-light;
+  min-height: calc(100vh - 120px);
+  width: 100%;
+
+  .sidebar-filter {
+    width: 360px;
+    background: #ffffff;
+    border-right: 1px solid #E5E7EB;
+    padding: 32px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: 1200px) {
+      width: 290px;
+      padding: 24px;
+    }
+  }
+
+  .category-content {
+    flex-grow: 1;
+    padding: 32px;
+
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
+}
+
+.filter-wrapper-content {
+  .filter-main-heading {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: $dark-900;
+  }
+
+  .filter-reset-link {
+    font-size: 14px;
+    color: $primary-blue-500;
+    font-weight: 600;
+    
+    &:hover {
+      color: darken($primary-blue-500, 15%);
+    }
+  }
+
+  .filter-group-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #90A3BF;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .filter-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #596780;
+    cursor: pointer;
+
+    .filter-label-text {
+      transition: color 0.15s ease;
+    }
+
+    &:hover .filter-label-text {
+      color: $dark-900;
+    }
+
+    .custom-filter-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #90A3BF;
+      border-radius: 6px;
+      accent-color: $primary-blue-500; 
+      cursor: pointer;
+    }
+
+    .item-count {
+      color: #90A3BF;
+      font-weight: 500;
+    }
+  }
+}
+
+.price-slider-wrapper {
+  width: 100%;
+
+  .price-slider {
+    width: 100%;
+    height: 12px;
+    background: #E5E7EB;
+    border-radius: 6px;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: $primary-blue-500;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(53, 99, 233, 0.2);
+      cursor: pointer;
+      transition: transform 0.1s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .price-value-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #596780;
+    margin-top: 12px;
+  }
+}
+
+
+.mobile-filter-drawer {
+  max-width: 320px;
+  background-color: #ffffff;
+}
+
+.mobile-filter-btn {
+  border-radius: 10px;
+  background: #ffffff;
+  color: #596780;
+  border-color: #E5E7EB !important;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.mobile-car-count {
+  font-size: 15px;
+  color: #90A3BF;
+}
+
+.empty-filter-state {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    max-width: 360px;
+  }
+}
+
+.reset-filter-btn {
+  background-color: $primary-blue-500;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: darken($primary-blue-500, 10%);
+  }
+}
+
+
+.category-pickdrop-reset {
+  padding: 0 !important;
+  background: transparent !important; 
+
+  .pick-card {
+    padding: 16px 20px !important; 
+    box-shadow: none !important; 
+    border: 1px solid #E5E7EB; 
+  }
+
+
+  @media (min-width: 992px) and (max-width: 1399px) {
+    .swap-col-wrapper {
+      margin: -16px 0 !important; 
+    }
+    
+   
+    .row > div {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+    }
+  }
+}
