@@ -58,11 +58,9 @@ const Navbar = () => {
       sticky="top"
     >
       <Container>
-
-        {/* MOBILE NAVBAR*/}
+       
         <div className="d-lg-none w-100">
 
-          {/* Topbar */}
           <div className="mobile-topbar d-flex justify-content-between align-items-center">
             <MainNavbar.Toggle aria-controls="navbar-content" />
 
@@ -80,6 +78,16 @@ const Navbar = () => {
                   />
                 </Dropdown.Toggle>
 
+                <Dropdown.Menu className="border-0 shadow mt-2">
+                  <Dropdown.Header>Hi, {user?.name}</Dropdown.Header>
+                  <Dropdown.Item onClick={() => navigate("/dashboard")}>
+                    My Bookings
+                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item className="text-danger" onClick={handleLogout}>
+                    Sign Out
+                  </Dropdown.Item>
+                </Dropdown.Menu>
               </Dropdown>
             ) : (
               <Link
@@ -92,7 +100,6 @@ const Navbar = () => {
 
           </div>
 
-          {/* Logo */}
           <div className="mobile-logo">
             <Link to="/">
               <img
@@ -143,6 +150,26 @@ const Navbar = () => {
             </button>
 
           </div>
+          <MainNavbar.Collapse id="navbar-content" className="mt-3">
+            <div className="d-flex align-items-center justify-content-center gap-4 py-3 bg-white border rounded-3 shadow-sm">
+              
+              <div className="position-relative" style={{ cursor: "pointer" }} onClick={handleShowWishlist}>
+                <img src={Heart} alt="heart" style={{ width: "44px", height: "44px" }} />
+                {wishlist.length > 0 && (
+                  <span className="position-absolute translate-middle badge rounded-pill bg-danger" style={{ top: "4px", right: "-4px", fontSize: "10px" }}>
+                    {wishlist.length}
+                  </span>
+                )}
+              </div>
+
+              <NotificationPopover>
+                <img src={Bell} alt="bell" style={{ width: "44px", height: "44px", cursor: "pointer" }} />
+              </NotificationPopover>
+
+              <img src={Settings} alt="settings" style={{ width: "44px", height: "44px", cursor: "pointer" }} />
+
+            </div>
+          </MainNavbar.Collapse>
         </div>
 
         <div className="d-none d-lg-flex w-100 align-items-center">

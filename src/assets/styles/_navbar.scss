@@ -109,6 +109,26 @@
   }
 }
 
+.navbar-collapse {
+      .position-relative, 
+      img, 
+      button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 50%;
+        border: 1px solid #f0f2f5;
+        background: #ffffff;
+        transition: transform 0.2s ease;
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+
 .notification-dropdown {
   width: 320px !important;
   border-radius: 12px !important;
