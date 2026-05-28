@@ -3,7 +3,7 @@ import { Dropdown } from "react-bootstrap";
 
 const NotificationPopover = ({ children }) => {
   return (
-    <Dropdown align="end" className="d-inline">
+    <Dropdown align="end" className="d-inline position-static">
       
       <Dropdown.Toggle as="div" bsPrefix="no-caret" className="cursor-pointer">
         {children}
@@ -11,7 +11,6 @@ const NotificationPopover = ({ children }) => {
 
       <Dropdown.Menu className="shadow border-0 m-0 p-0 notification-dropdown">
         
-        {/* Header Block Row */}
         <div className="p-3 border-bottom d-flex justify-content-between align-items-center bg-light rounded-top-3">
           <h6 className="m-0 fw-bold text-dark fs-6-custom">Notifications</h6>
           <span className="text-primary fw-semibold fs-7-custom cursor-pointer">
