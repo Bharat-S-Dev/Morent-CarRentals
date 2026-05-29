@@ -4,7 +4,7 @@ import { Container, Navbar as MainNavbar, Nav, Form, InputGroup, Dropdown,} from
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setSearchQuery } from "../../redux/slices/carSlice";
+import { setSearchQuery, loadWishlist } from "../../redux/slices/carSlice";
 import { logoutUser } from "../../redux/slices/authSlice";
 
 import { toast } from "react-toastify";
@@ -47,6 +47,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUser());
+    dispatch(loadWishlist());
     toast.success("Successfully logged out!");
     navigate("/");
   };

@@ -82,6 +82,7 @@ const authSlice = createSlice({
         state.isAuthenticated = true;
         state.error = null;
         localStorage.setItem("morent_user", JSON.stringify(state.user));
+        localStorage.setItem("currentUser", foundUser.email);
       } else {
         state.error = "Invalid email or password.";
       }
@@ -91,6 +92,7 @@ const authSlice = createSlice({
       state.isAuthenticated = false;
       state.error = null;
       localStorage.removeItem("morent_user");
+      localStorage.removeItem("currentUser");
     },
     clearAuthError: (state) => {
       state.error = null;

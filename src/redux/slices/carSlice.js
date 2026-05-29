@@ -12,7 +12,9 @@ const getStoredCars = () => {
 
 const getStoredWishlist = () => {
   try {
-    const list = localStorage.getItem("morent_wishlist");
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) return [];
+    const list = localStorage.getItem(`morent_wishlist_${currentUser}`);
     return list ? JSON.parse(list) : [];
   } catch (e) {
     return [];
@@ -37,6 +39,21 @@ const carSlice = createSlice({
   name: "car",
   initialState,
   reducers: {
+    loadWishlist: (state) => {
+      const currentUser = localStorage.getItem("currentUser");
+
+      if (!currentUser) {
+        state.wishlist = [];
+        return;
+      }
+
+      const storedWishlist = localStorage.getItem(`morent_wishlist_${currentUser}` );
+
+      state.wishlist = storedWishlist
+        ? JSON.parse(storedWishlist)
+        : [];
+    },
+
     setSearchQuery: (state, action) => {
       state.searchQuery = action.payload;
     },
@@ -75,7 +92,8 @@ const carSlice = createSlice({
       } else {
         state.wishlist.splice(index, 1);
       }
-      localStorage.setItem("morent_wishlist", JSON.stringify(state.wishlist));
+      const currentUser = localStorage.getItem("currentUser");
+      localStorage.setItem(`morent_wishlist_${currentUser}`, JSON.stringify(state.wishlist));
     },
     addReview: (state, action) => {
       const { carId, review } = action.payload;
@@ -100,6 +118,7 @@ export const {
   setMaxPrice,
   resetFilters,
   toggleWishlist,
+  loadWishlist,
   addReview
 } = carSlice.actions;
 

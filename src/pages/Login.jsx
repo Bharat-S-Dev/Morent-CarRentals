@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { loginUser, clearAuthError } from "../redux/slices/authSlice";
 import { toast } from "react-toastify";
+import { loadWishlist } from "../redux/slices/carSlice";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Login = () => {
@@ -26,10 +27,11 @@ const Login = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
+      dispatch(loadWishlist());
       toast.success("Welcome back to MORENT!");
       navigate(from, { replace: true });
     }
-  }, [isAuthenticated, navigate, from]);
+  }, [isAuthenticated, navigate, from, dispatch]);
 
   useEffect(() => {
     if (error) {
